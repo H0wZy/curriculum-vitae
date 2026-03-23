@@ -1,2 +1,120 @@
 # curriculum-vitae
-My curriculum vitae
+```json
+{
+  "selectedTemplate": 2,
+  "headings": {
+    "projects": "Projetos",
+    "awards": "Premiações",
+    "education": "Formação",
+    "work": "Experiências",
+    "skills": "Habilidades"
+  },
+  "basics": {
+    "name": "Marcos Junior Bueno Selzler",
+    "email": "h0wzymarcos@gmail.com",
+    "phone": "43988431018",
+    "location": {
+      "address": "Brasil"
+    },
+    "website": "https://linktr.ee/h0wzymarcos"
+  },
+  "education": [
+    {
+      "institution": "Unicesumar",
+      "location": "Londrina, Paraná, Brasil",
+      "endDate": "06/2025",
+      "studyType": "Tecnólogo",
+      "area": "Análise e Desenvolvimento de Sistemas",
+      "startDate": "01/2023"
+    }
+  ],
+  "work": [
+    {
+      "company": "Tata Consultancy Services",
+      "position": "Software Engineer Bootcamp 2x2y",
+      "website": "",
+      "endDate": "11/2025",
+      "highlights": [
+        "Minha participação no Bootcamp 2x2y, tive foco em engenharia e desenvolvimento de software full stack, onde aperfeiçoei hard skills técnicas e soft skills como comunicação, trabalho em equipe e resolução de problemas. O programa foi concluído com a apresentação de um projeto final, aplicando na prática os conhecimentos adquiridos."
+      ],
+      "location": "Londrina, Paraná, Brasil",
+      "startDate": "05/2025"
+    },
+    {
+      "highlights": [
+        "Atuo no desenvolvimento e manutenção de aplicações Java 8, utilizando JSF em servidores WildFly/JBoss. Experiência com versionamento de código via Git e suporte a aplicações em ambiente de nuvem (Google Cloud Platform – GCP)."
+      ],
+      "endDate": "Presente",
+      "startDate": "11/2025",
+      "location": "Londrina, Paraná, Brasil",
+      "position": "Software Engineer",
+      "company": "Tata Consultancy Services"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Golang",
+        "React",
+        ".NET",
+        "C#",
+        "SQL/NoSQL",
+        "Git/GitHub",
+        "Docker",
+        "Clean Code",
+        "DDD",
+        "POO",
+        "Frameworks",
+        "English"
+      ],
+      "name": "Hard Skills"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Golang User API",
+      "keywords": [
+        "Golang",
+        "Gorm",
+        "Gin-gonic"
+      ],
+      "description": "Esse projeto tem como objetivo aprender e aplicar boas práticas no desenvolvimento de API Rest utilizando Golang. Estou desenvolvendo uma API Rest CRUD para criação, autorização e autenticação de usuários.",
+      "url": "https://github.com/H0wZy/user-api"
+    },
+    {
+      "keywords": [
+        ".NET",
+        "C#",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Entity Framework",
+        "Docker",
+        "Nginx",
+        "Makefile"
+      ],
+      "name": "web.easydonate",
+      "description": "EasyDonate - Marketplace de Doações é uma plataforma que conecta doadores e receptores em um marketplace de economia circular. Qualquer pessoa ou empresa pode doar qualquer item para quem precisa. EasyDonate é uma solução completa para facilitar doações entre pessoas, empresas e organizações. A plataforma permite que qualquer um doe itens que não usa mais para quem realmente precisa, criando uma economia circular sustentável.",
+      "url": "https://github.com/H0wZy/web.easydonate"
+    }
+  ],
+  "awards": [
+    {
+      "title": "TCS AI Friday",
+      "date": "02/2026",
+      "awarder": "Marcos Junior Bueno Selzler",
+      "summary": "Durante o evento, eu e meu time trabalhamos no desenvolvimento do projeto Energy Saver, encarando uma proposta prática com uso de LLMs para resolver um problema real.  Nossa solução foi focada em eficiência energética, utilizando análise de dados a partir de arquivos CSV combinados com modelos de linguagem. A aplicação é capaz de identificar padrões de consumo, detectar possíveis anomalias no sistema elétrico e gerar recomendações inteligentes para reduzir desperdícios e otimizar o uso de energia."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
+```
