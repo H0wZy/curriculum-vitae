@@ -2,7 +2,7 @@
   "selectedTemplate": 2,
   "headings": {
     "projects": "Projetos",
-    "awards": "Premiações",
+    "awards": "Certificações",
     "education": "Formação",
     "work": "Experiências",
     "skills": "Habilidades"
@@ -12,7 +12,7 @@
     "email": "h0wzymarcos@gmail.com",
     "phone": "43988431018",
     "location": {
-      "address": "Brasil"
+      "address": "Brasil (GMT-3)"
     },
     "website": "https://linktr.ee/h0wzymarcos"
   },
@@ -29,23 +29,23 @@
   "work": [
     {
       "company": "Tata Consultancy Services",
-      "position": "Software Engineer Bootcamp 2x2y",
+      "position": "Software Engineer",
       "website": "",
-      "endDate": "11/2025",
+      "endDate": "Presente",
       "highlights": [
-        "Minha participação no Bootcamp 2x2y, tive foco em engenharia e desenvolvimento de software full stack, onde aperfeiçoei hard skills técnicas e soft skills como comunicação, trabalho em equipe e resolução de problemas. O programa foi concluído com a apresentação de um projeto final, aplicando na prática os conhecimentos adquiridos."
+        "Atuo no desenvolvimento e manutenção de aplicações Java 8, utilizando JSF em servidores WildFly/JBoss. Experiência com versionamento de código via Git e suporte a aplicações em ambiente de nuvem (Google Cloud Platform – GCP)."
       ],
       "location": "Londrina, Paraná, Brasil",
       "startDate": "05/2025"
     },
     {
       "highlights": [
-        "Atuo no desenvolvimento e manutenção de aplicações Java 8, utilizando JSF em servidores WildFly/JBoss. Experiência com versionamento de código via Git e suporte a aplicações em ambiente de nuvem (Google Cloud Platform – GCP)."
+        "Minha participação no Bootcamp 2x2y, tive foco em engenharia e desenvolvimento de software full stack, onde aperfeiçoei hard skills técnicas e soft skills como comunicação, trabalho em equipe e resolução de problemas. O programa foi concluído com a apresentação de um projeto final, aplicando na prática os conhecimentos adquiridos."
       ],
-      "endDate": "Presente",
-      "startDate": "11/2025",
+      "endDate": "11/2025",
+      "startDate": "05/2025",
       "location": "Londrina, Paraná, Brasil",
-      "position": "Software Engineer",
+      "position": "Software Engineer Bootcamp 2x2y",
       "company": "Tata Consultancy Services"
     }
   ],
@@ -63,10 +63,16 @@
         "Clean Code",
         "DDD",
         "POO",
-        "Frameworks",
-        "English"
+        "Frameworks"
       ],
-      "name": "Hard Skills"
+      "name": "Tech Stack"
+    },
+    {
+      "keywords": [
+        "Inglês: Intermediário",
+        "Português Brasileiro: Nativo"
+      ],
+      "name": "Idiomas"
     }
   ],
   "projects": [
@@ -82,17 +88,13 @@
     },
     {
       "keywords": [
-        ".NET",
-        "C#",
-        "React",
-        "TypeScript",
-        "PostgreSQL",
+        ".NET C#",
         "Entity Framework",
+        "React",
         "Docker",
-        "Nginx",
-        "Makefile"
+        "PostgreSQL"
       ],
-      "name": "web.easydonate",
+      "name": "Web EasyDonate",
       "description": "EasyDonate - Marketplace de Doações é uma plataforma que conecta doadores e receptores em um marketplace de economia circular. Qualquer pessoa ou empresa pode doar qualquer item para quem precisa. EasyDonate é uma solução completa para facilitar doações entre pessoas, empresas e organizações. A plataforma permite que qualquer um doe itens que não usa mais para quem realmente precisa, criando uma economia circular sustentável.",
       "url": "https://github.com/H0wZy/web.easydonate"
     }
@@ -108,8 +110,8 @@
   "sections": [
     "templates",
     "profile",
-    "education",
     "work",
+    "education",
     "skills",
     "projects",
     "awards"
