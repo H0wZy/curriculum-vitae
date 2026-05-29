@@ -1,3 +1,13 @@
-# Welcome to my CV's repository, feel free to download the PDF file or to just take a look.
+# Marcos Junior Bueno Selzler — Curriculum Vitae
 
-### CV made with [Overleaf](https://pt.overleaf.com/) using LaTeX language.
+This repository contains my professional résumé built with LaTeX using Overleaf.
+
+## Technologies
+- LaTeX
+- Overleaf
+
+## PDF Version
+[Download CV](https://raw.githubusercontent.com/H0wZy/curriculum-vitae/main/CV_Marcos_Junior_Bueno_Selzler.pdf)
+
+## Repository
+[View on GitHub](https://github.com/H0wZy/curriculum-vitae)
