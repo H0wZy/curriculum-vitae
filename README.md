@@ -21,7 +21,9 @@ Both languages come from a single source (`overleaf/main.tex`) via the
 - **CLI:** `xelatex main.tex` (EN) or `xelatex main-pt.tex` (PT).
 
 ## PDF Version
-[Download CV (PDF)](https://raw.githubusercontent.com/H0wZy/curriculum-vitae/main/CV_Marcos_Junior_Bueno_Selzler.pdf)
+[Download English version of CV (PDF)](https://raw.githubusercontent.com/H0wZy/curriculum-vitae/main/files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf)
+
+[Download Portuguese (Brazil) version of CV (PDF)](https://raw.githubusercontent.com/H0wZy/curriculum-vitae/main/files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf)
 
 ## Repository
 [View on GitHub](https://github.com/H0wZy/curriculum-vitae)
