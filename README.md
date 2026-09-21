@@ -24,8 +24,8 @@ Both languages come from a single source (`overleaf/main.tex`) via the
 - **CLI with a TeX install:** `xelatex main.tex` (EN) or `xelatex main-pt.tex` (PT).
 
 ## PDF Version
-- **English:** [howzysolutions.com/cv.pdf](https://howzysolutions.com/cv.pdf) (or `/cv/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf`)
-- **Português:** [howzysolutions.com/pt/cv.pdf](https://howzysolutions.com/pt/cv.pdf) (or `/cv/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf`)
+- **English:** [howzysolutions.com/cv.pdf/eng](https://howzysolutions.com/cv.pdf/eng)
+- **Português:** [howzysolutions.com/cv.pdf/ptbr](https://howzysolutions.com/cv.pdf/ptbr)
 
 ## CI/CD Automation
 On push to `main` with changes in `overleaf/`:
