@@ -12,13 +12,13 @@ permissions:
 
 jobs:
   build-and-sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       HOWZYSOLUTIONS_DEPLOY_TOKEN: ${{ secrets.HOWZYSOLUTIONS_DEPLOY_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
