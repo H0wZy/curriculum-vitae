@@ -13,15 +13,25 @@ permissions:
 jobs:
   build-and-sync:
     runs-on: ubuntu-latest
+    env:
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      HOWZYSOLUTIONS_DEPLOY_TOKEN: ${{ secrets.HOWZYSOLUTIONS_DEPLOY_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install Tectonic
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.tectonic-typesetting.github.io | sh
-          sudo mv tectonic /usr/local/bin/
+          set -euo pipefail
+          asset_url=$(curl -sSL -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/repos/tectonic-typesetting/tectonic/releases/latest | jq -r '.assets[] | select(.name | test("x86_64-unknown-linux-gnu.*\\.tar\\.gz$")) | .browser_download_url' | head -n 1)
+          test -n "$asset_url"
+          curl -sSL "$asset_url" | tar -xz -C /tmp
+          sudo mv /tmp/tectonic /usr/local/bin/
+          tectonic --version
 
       - name: Compile LaTeX to PDF
         run: |
