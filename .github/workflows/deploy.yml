@@ -63,8 +63,6 @@ jobs:
         run: |
           npx wrangler r2 object put "howzysolutions/cv/eng/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf" --file "files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
           npx wrangler r2 object put "howzysolutions/cv/ptbr/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf" --file "files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
-          npx wrangler r2 object put "howzysolutions/cv/eng/cv.pdf" --file "files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
-          npx wrangler r2 object put "howzysolutions/cv/ptbr/cv.pdf" --file "files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
 
       - name: Trigger howzysolutions deployment
         if: env.HOWZYSOLUTIONS_DEPLOY_TOKEN != ''
