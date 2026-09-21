@@ -14,8 +14,7 @@ jobs:
   build-and-sync:
     runs-on: ubuntu-24.04
     env:
-      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       HOWZYSOLUTIONS_DEPLOY_TOKEN: ${{ secrets.HOWZYSOLUTIONS_DEPLOY_TOKEN }}
     steps:
       - uses: actions/checkout@v7
@@ -57,18 +56,15 @@ jobs:
           fi
 
       - name: Upload PDFs to Cloudflare R2
-        if: env.R2_ACCESS_KEY_ID != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        if: env.CLOUDFLARE_API_TOKEN != ''
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          AWS_REGION: auto
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 20be850405e672a89316739f155c6853
         run: |
-          ENDPOINT="https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com"
-          aws s3 cp files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf s3://howzysolutions/cv/eng/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf --endpoint-url $ENDPOINT --content-type application/pdf
-          aws s3 cp files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf s3://howzysolutions/cv/ptbr/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf --endpoint-url $ENDPOINT --content-type application/pdf
-          aws s3 cp files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf s3://howzysolutions/cv/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf --endpoint-url $ENDPOINT --content-type application/pdf
-          aws s3 cp files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf s3://howzysolutions/cv/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf --endpoint-url $ENDPOINT --content-type application/pdf
+          npx wrangler r2 object put "howzysolutions/cv/eng/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf" --file "files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
+          npx wrangler r2 object put "howzysolutions/cv/ptbr/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf" --file "files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
+          npx wrangler r2 object put "howzysolutions/cv/eng/cv.pdf" --file "files/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
+          npx wrangler r2 object put "howzysolutions/cv/ptbr/cv.pdf" --file "files/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf" --content-type "application/pdf" --content-disposition "inline" --remote
 
       - name: Trigger howzysolutions deployment
         if: env.HOWZYSOLUTIONS_DEPLOY_TOKEN != ''
