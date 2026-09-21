@@ -24,9 +24,15 @@ Both languages come from a single source (`overleaf/main.tex`) via the
 - **CLI with a TeX install:** `xelatex main.tex` (EN) or `xelatex main-pt.tex` (PT).
 
 ## PDF Version
-[Download English version of CV (PDF)](https://howzysolutions.com/cv/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf)
+- **English:** [howzysolutions.com/cv.pdf](https://howzysolutions.com/cv.pdf) (or `/cv/ENG_CV_Marcos_Junior_Bueno_Selzler.pdf`)
+- **Português:** [howzysolutions.com/pt/cv.pdf](https://howzysolutions.com/pt/cv.pdf) (or `/cv/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf`)
 
-[Download Portuguese (Brazil) version of CV (PDF)](https://howzysolutions.com/cv/PTBR_CV_Marcos_Junior_Bueno_Selzler.pdf)
+## CI/CD Automation
+On push to `main` with changes in `overleaf/`:
+1. GitHub Actions compiles both PDFs using Tectonic.
+2. Commits updated PDFs to `files/`.
+3. Syncs PDFs to Cloudflare R2 bucket `howzysolutions/cv/`.
+4. Dispatches build trigger to [howzysolutions](https://github.com/H0wZy/howzysolutions) to update the live portfolio.
 
 ## Repository
 [View on GitHub](https://github.com/H0wZy/curriculum-vitae)
